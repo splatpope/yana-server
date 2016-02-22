@@ -447,7 +447,7 @@ function vocalinfo_action(){
 		case 'vocalinfo_wikipedia':
 			global $_;
 			
-				$url = 'http://fr.wikipedia.org/w/api.php?action=parse&page='.$_['word'].'&format=json&prop=text&section=0';
+				$url = 'https://fr.wikipedia.org/w/api.php?action=parse&page='.$_['word'].'&format=json&prop=text&section=0';
 				$ch = curl_init($url);
 				curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 				curl_setopt ($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.1; fr-FR; rv:1.8.1.1) Gecko/20061204 Firefox/2.0.0.1" ); // required by wikipedia.org server; use YOUR user agent with YOUR contact information. (otherwise your IP might get blocked)
